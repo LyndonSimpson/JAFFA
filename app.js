@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const { Configuration, OpenAIApi } = require("openai");
+require('dotenv').config();
 
 const configuration = new Configuration({
-  apiKey: "your_openai_api_key_here", // use dotenv
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -12,17 +13,14 @@ app.use(cors());
 app.use(express.json());
 
 async function generateResponse(prompt, role) {
-  const response = await openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
-    messages: [
-      {
-        role: role,
-        content: prompt,
-      },
-    ],
+  const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: `${role}. ${prompt}`,
+    max_tokens: 1000,
+    temperature: 0,
   });
-
-  return response.data.choices[0].message.content.trim();
+  console;console.log(response);
+  return response.data.choices[0].text.trim();
 }
 
 // Create an endpoint to handle code generation requests
