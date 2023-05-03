@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const openai = require("openai");
 
-openai.apiKey = "your_openai_api_key_here";
+openai.apiKey = "your_openai_api_key_here"; // use dotenv 
 
 const app = express();
 app.use(cors());
