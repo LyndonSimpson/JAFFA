@@ -1,0 +1,24 @@
+{
+  "name": "jaffa",
+  "version": "1.0.0",
+  "description": "Just A Few Fast Agents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LyndonSimpson/JAFFA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LyndonSimpson/JAFFA/issues"
+  },
+  "homepage": "https://github.com/LyndonSimpson/JAFFA#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "openai": "^3.2.1"
+  }
+}
