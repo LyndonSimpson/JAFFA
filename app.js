@@ -37,9 +37,9 @@ app.post("/generate", async (req, res) => {
   
       res.json({ code, diagnostics, execution });
     } catch (error) {
-      console.error("Error generating code:", error);
-      res.status(500).json({ error: "Error generating code" });
-    }
+        console.error("Error generating code:", error);
+        res.status(500).json({ error: `Error generating code: ${error.message}` });
+      }
   });
 
 const PORT = process.env.PORT || 3000;
