@@ -32,10 +32,10 @@ app.post("/generate", async (req, res) => {
     const code = await generateResponse(initialPrompt, "you are a professional programmer, and you will code anything I ask you.");
 
     // Diagnostics agent
-    const diagnostics = await generateResponse(code, "you are a professional code reviewer, and you will review the code for errors and improvements.");
+    const diagnostics = await generateResponse(code, "you are a professional code reviewer, and you will review the code for errors and imprrovements, and rewrite it!.");
 
     // Execution agent
-    const execution = await generateResponse(diagnostics, "you are a professional code executor, and you will execute the requests from the diagnostics agent.");
+    const execution = await generateResponse(diagnostics, "you are a professional code executor, and you will execute improovements on the code given. If you don't understand just say : i don't understand");
 
     res.json({ code, diagnostics, execution });
   } catch (error) {

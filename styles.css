@@ -1,0 +1,19 @@
+/* Set border styles for code, diagnostics, and execution divs */
+.code {
+    border: 2px solid blue;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .diagnostics {
+    border: 2px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .execution {
+    border: 2px solid green;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
