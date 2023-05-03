@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const generateButton = document.getElementById("generate");
     const promptInput = document.getElementById("prompt");
