@@ -12,7 +12,7 @@ async function generateResponse(prompt, role) {
     const response = await openai.Completion.create({
         engine: "text-davinci-codex-002",
         prompt: `${role}: ${prompt}`,
-        temperature: 0.7,
+        temperature: 0.2,
         max_tokens: 100,
         n: 1,
         stop: null,
