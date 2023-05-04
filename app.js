@@ -14,8 +14,8 @@ app.use(express.json());
 
 async function generateResponse(prompt, role) {
   const response = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt: `${role}. ${prompt}`,
+    model: "text-davinci-003",                       // must try out turbo 3.5 and different temperatures, right now only code appears,
+    prompt: `${role}. ${prompt}`,                    // wich isn't bad but sometimes would be nice to have the changes commented.
     max_tokens: 1000,
     temperature: 0,
   });
